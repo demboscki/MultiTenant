@@ -1,0 +1,23 @@
+﻿@model List<MultiTenant.Models.Tenant>
+
+@{
+    ViewBag.Title = "Tenants";
+}
+
+<div class="jumbotron">
+    <h1>Tenants</h1>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <ul>
+            @foreach (var tenant in Model)
+            {
+                <li>@tenant.Name</li>
+                <li>...@tenant.DomainName</li>
+            }
+        </ul>
+    </div>
+
+</div>
